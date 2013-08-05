@@ -11,7 +11,7 @@ class PrivateGallery < ActiveRecord::Base
   validates :email, :length => { :within => 5..128, :allow_blank => true }
 
   # Mass-assignment protection
-  attr_accessible :name, :email, :expires_on, :photos_attrs
+  # attr_accessible :name, :email, :expires_on, :photos_attrs
 
   # Named scopes
   scope :active, where("expires_on >= ?", Time.now)

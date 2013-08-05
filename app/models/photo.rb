@@ -14,7 +14,7 @@ class Photo < ActiveRecord::Base
   validates :photo, :presence => true
 
   # Mass-assignment protection
-  attr_accessible :position, :photo, :photo_cache, :name
+  # attr_accessible :position, :photo, :photo_cache, :name
 
   # ****
   # Callbacks

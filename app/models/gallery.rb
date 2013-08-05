@@ -17,7 +17,7 @@ class Gallery < ActiveRecord::Base
   validates :cover, :presence => true
 
   # Mass-assignment protection
-  attr_accessible :name, :meta_title, :keywords, :description, :meta_description, :body, :cover, :photos_attrs
+  # attr_accessible :name, :meta_title, :keywords, :description, :meta_description, :body, :cover, :photos_attrs
 
   # Multi-file uploads
   def photos_attrs=(attrs)

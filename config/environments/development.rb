@@ -8,9 +8,6 @@ Grokphoto::Application.configure do
 
   config.cache_store = :memory_store
   
-  # Log error messages when you accidentally call methods on nil.
-  config.whiny_nils = true
-
   # Show full error reports and disable caching
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
@@ -28,4 +25,7 @@ Grokphoto::Application.configure do
   config.assets.compress = false
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' } # TODO - change this to whatever you run development on. I.e. :host => 'localhost:3000'
+
+  config.eager_load = false
+
 end

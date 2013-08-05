@@ -23,7 +23,7 @@ class Photographer < ActiveRecord::Base
   validates :conversion_code, :length => { :within => 10..9000, :allow_blank => true }
 
   # Mass-assignment protection
-  attr_accessible :email, :password, :meta_title, :keywords, :meta_description, :name, :tagline, :time_zone, :description, :contact_instructions, :phone, :preferred_domain, :portfolio_url, :blog_url, :facebook_url, :twitter_url, :disqus_short_name, :instagram_id, :google_analytics_key, :google_verification, :conversion_code, :remember_me
+  # attr_accessible :email, :password, :meta_title, :keywords, :meta_description, :name, :tagline, :time_zone, :description, :contact_instructions, :phone, :preferred_domain, :portfolio_url, :blog_url, :facebook_url, :twitter_url, :disqus_short_name, :instagram_id, :google_analytics_key, :google_verification, :conversion_code, :remember_me
 
   # Make sure we always have an auth token assigned.
   before_save :ensure_authentication_token

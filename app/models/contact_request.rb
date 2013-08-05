@@ -6,7 +6,7 @@ class ContactRequest < ActiveRecord::Base
   validates :message, :presence => true, :length => { :minimum => 10 }
 
   # Mass-assignment protection
-  attr_accessible :email, :name, :message
+  # attr_accessible :email, :name, :message
 
   # Named scopes
   scope :unread, where(:read => false)

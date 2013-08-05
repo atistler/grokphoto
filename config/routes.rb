@@ -1,9 +1,9 @@
 Grokphoto::Application.routes.draw do
 
   root :to => "home#index"
-  match 'timestamp' => 'home#timestamp' # used to keep passenger spooled up in prod
-  match 'sitemap' => 'home#sitemap'
-  match 'blog' => 'home#blog'
+  get 'timestamp' => 'home#timestamp' # used to keep passenger spooled up in prod
+  get 'sitemap' => 'home#sitemap'
+  get 'blog' => 'home#blog'
 
   resources :private_galleries, :only => :show
   resources :galleries, :only => :show
@@ -15,7 +15,7 @@ Grokphoto::Application.routes.draw do
 
   devise_for :photographers
 
-  match 'admin' => 'admin/events#index'
+  get 'admin' => 'admin/events#index'
   namespace :admin do
     resources :events, :only => :index
     resource :photographer, :only => [:edit, :update]

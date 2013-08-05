@@ -8,7 +8,7 @@ class Page < ActiveRecord::Base
   validates :body, :presence => true, :length => { :minimum => 10 }
 
   # Mass-assignment protection
-  attr_accessible :name, :meta_title, :keywords, :meta_description, :body, :image, :retained_image
+  # attr_accessible :name, :meta_title, :keywords, :meta_description, :body, :image, :retained_image
 
   # Image attachment
   image_accessor :image
