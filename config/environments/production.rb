@@ -5,7 +5,7 @@ Grokphoto::Application.configure do
   config.cache_classes = true
 
   # Full error reports are disabled and caching is turned on
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
@@ -22,7 +22,7 @@ Grokphoto::Application.configure do
   # config.force_ssl = true
 
   # See everything in the log (default is :info)
-  # config.log_level = :debug
+  config.log_level = :debug
 
   # Use a different logger for distributed setups
   # config.logger = SyslogLogger.new
@@ -50,14 +50,17 @@ Grokphoto::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.action_mailer.default_url_options = { :host => (ENV['EMAIL_HOST'] || 'grokphoto.com') }
+  config.action_mailer.default_url_options = {:host => 'littlemo.org'}
 
-  ActionMailer::Base.smtp_settings = {
-    :address        => "smtp.sendgrid.net",
-    :port           => "25",
-    :authentication => :plain,
-    :user_name      => ENV['SENDGRID_USERNAME'],
-    :password       => ENV['SENDGRID_PASSWORD'],
-    :domain         => ENV['SENDGRID_DOMAIN']
+  config.action_mailer.deconfig.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.smtp_settings = {
+    :address => "smtp.gmail.com",
+    :port => 587,
+    :domain => 'littlemo.org',
+    :user_name => 'atistler@gmail.com',
+    :password => 'We.ed4201',
+    :authentication => 'plain',
+    :enable_starttls_auto => true
   }
 end
