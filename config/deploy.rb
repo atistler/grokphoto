@@ -1,6 +1,13 @@
 #require 'bundler/capistrano'
 require 'capistrano/ext/multistage'
 
+require "rvm/capistrano"
+
+set :rvm_ruby_string, :local        # use the same ruby as used locally for deployment
+
+before 'deploy', 'rvm:install_rvm'  # install/update RVM
+before 'deploy', 'rvm:install_ruby' # install Ruby and create gemset (both if missing)
+
 set :application, "mo_photos"
 set :repository, "git@github.com:atistler/grokphoto.git"
 
