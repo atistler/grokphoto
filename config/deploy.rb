@@ -19,8 +19,8 @@ set :scm, :git
 
 set :use_sudo, false
 
-before 'deploy', 'rvm:install_rvm' # install/update RVM
-before 'deploy', 'rvm:install_ruby' # install Ruby and create gemset (both if missing)
+before 'deploy:cold', 'rvm:install_rvm' # install/update RVM
+before 'deploy:cold', 'rvm:install_ruby' # install Ruby and create gemset (both if missing)
 
 # if you want to clean up old releases on each deploy uncomment this:
 after 'deploy:restart', 'deploy:cleanup'
