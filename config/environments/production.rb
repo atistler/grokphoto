@@ -22,7 +22,7 @@ Grokphoto::Application.configure do
   # config.force_ssl = true
 
   # See everything in the log (default is :info)
-  # config.log_level = :debug
+  config.log_level = :debug
 
   # Use a different logger for distributed setups
   # config.logger = SyslogLogger.new
@@ -52,8 +52,8 @@ Grokphoto::Application.configure do
 
   config.action_mailer.default_url_options = {:host => 'littlemo.org'}
 
-  config.action_mailer.deconfig.action_mailer.delivery_method = :smtp
-  # config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.smtp_settings = {
     :address => "smtp.gmail.com",
     :port => 587,
