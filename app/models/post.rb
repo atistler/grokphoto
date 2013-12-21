@@ -63,7 +63,7 @@ class Post < ActiveRecord::Base
     end
 
     def log_destroy_event
-      Event.create(:description => "Deleted post: #{name}")
+      Event.create(:description => "Deleted post: #{title}")
     end
 
 end
