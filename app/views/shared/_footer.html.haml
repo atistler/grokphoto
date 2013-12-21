@@ -30,8 +30,6 @@
           %h4
             - unless photographer.phone.blank?
               = photographer.phone
-              \/
-            #= mail_to(photographer.email, photographer.email, :encode => 'javascript').html_safe
           %p= "&copy; #{Time.now.year}, #{photographer.name}, All Rights Reserved".html_safe
 
 - unless photographer.google_analytics_key.blank?
