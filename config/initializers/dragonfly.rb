@@ -3,7 +3,7 @@ require 'dragonfly'
 app = Dragonfly[:images]
 app.configure_with(:imagemagick)
 app.configure_with(:rails)
-if Rails.env.production?
+if Rails.env.production? and false
   app.configure do |c|
     c.datastore = Dragonfly::DataStorage::S3DataStore.new(
       :bucket_name => ENV['S3_BUCKET'],
