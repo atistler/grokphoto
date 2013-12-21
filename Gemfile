@@ -61,6 +61,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2'
   gem 'uglifier', '>= 1.0'
   gem 'execjs', '1.3' # Remove once execjs v1.3.2 or 1.3.1.1
+  gem 'turbo-sprockets-rails3'
 end
 
 group :development, :test do
