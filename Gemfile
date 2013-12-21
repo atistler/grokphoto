@@ -9,6 +9,8 @@ gem 'thin'
 gem 'json', '~> 1.6'
 gem 'jquery-rails', '~> 1.0'
 
+gem 'therubyracer'
+
 # Markup / templates
 gem 'rdiscount', '~> 1.6'
 gem 'haml', '~> 3.1'
