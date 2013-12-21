@@ -50,6 +50,7 @@ gem 'hirefireapp'
 gem 'factory_girl_rails', '~> 1.7'
 
 gem 'rvm-capistrano'
+gem 'capistrano-bundler'
 
 # Gems used only for assets and not required
 # In production environments by default.
