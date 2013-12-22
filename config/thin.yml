@@ -1,9 +1,10 @@
 ---
 pid: tmp/pids/thin.pid
-address: 0.0.0.0
+#address: 0.0.0.0
 timeout: 30
 wait: 30
-port: 80
+#port: 80
+socket: tmp/thin.sock
 log: log/thin.log
 max_conns: 1024
 require: []
