@@ -58,8 +58,8 @@ Grokphoto::Application.configure do
     :address => "smtp.gmail.com",
     :port => 587,
     :domain => 'littlemo.us',
-    :user_name => 'atistler@gmail.com',
-    :password => 'We.ed4201',
+    :user_name => 'motryon@gmail.com',
+    :password => 'Mo1714',
     :authentication => 'plain',
     :enable_starttls_auto => true
   }
